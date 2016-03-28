@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface CalendarIconImage : UIImage
+
 -(id)initWithText:(NSString*)text andFrame:(CGRect)frame;
 
 -(id)initWithDate:(NSDate *)date andFrame:(CGRect)frame;
 
-
-
 //-(id)scaledToSize:(CGSize)size;
+
 @end

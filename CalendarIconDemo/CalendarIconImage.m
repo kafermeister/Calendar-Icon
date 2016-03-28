@@ -34,9 +34,11 @@
         [df2 setDateFormat:@"d"];
         text  =  [df2 stringFromDate:theDate];  
         
-        df2.dateStyle = kCFDateFormatterLongStyle;
+        [df2 setDateFormat:@"MMM"];
+//        df2.dateStyle = kCFDateFormatterLongStyle;
         
-        text2  =  [[[df2 stringFromDate:theDate] componentsSeparatedByString:@" "] objectAtIndex:0];  
+        text2  =  [df2 stringFromDate:theDate];
+//        text2  =  [[[df2 stringFromDate:theDate] componentsSeparatedByString:@" "] objectAtIndex:0];
         
     }else {
         

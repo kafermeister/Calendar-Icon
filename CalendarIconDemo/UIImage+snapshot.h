@@ -13,6 +13,6 @@
 + (UIImage*)imageFromView:(UIView*)view scaledToSize:(CGSize)newSize;
 + (UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
 + (UIImage*)scaledToSize:(CGSize)newSize;
-+ (UIImage *) maskImage:(UIImage *)image withMask:(UIImage *)maskImage;
++ (UIImage *)maskImage:(UIImage *)image withMask:(UIImage *)maskImage;
 @end
 

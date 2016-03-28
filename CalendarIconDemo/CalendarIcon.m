@@ -52,7 +52,8 @@
     NSString* dayContent = self.day;
     UIFont* dayFont = [UIFont fontWithName: @"Copperplate-Bold" size: 190];
     NSString* monthContent = self.month;
-    UIFont* monthFont = [UIFont fontWithName: @"Copperplate" size: 32];;
+    UIFont* monthFont = [UIFont fontWithName: @"Copperplate" size: 60];;
+//    UIFont* monthFont = [UIFont fontWithName: @"Copperplate" size: 32];;
     
     
     //// background Drawing
@@ -122,7 +123,11 @@
 
     
     //// month Drawing
-    CGRect monthRect = CGRectMake(CGRectGetMinX(monthFrame1) + floor(CGRectGetWidth(monthFrame1) * 0), CGRectGetMinY(monthFrame1) + floor(CGRectGetHeight(monthFrame1) * 0.15), floor(CGRectGetWidth(monthFrame1) * 1), floor(CGRectGetHeight(monthFrame1) * 0.75));
+    CGRect monthRect = CGRectMake(CGRectGetMinX(monthFrame1) + floor(CGRectGetWidth(monthFrame1) * 0),
+                                  CGRectGetMinY(monthFrame1) + floor(CGRectGetHeight(monthFrame1)),
+                                  floor(CGRectGetWidth(monthFrame1) * 1),
+                                  floor(CGRectGetHeight(monthFrame1)));
+//    CGRect monthRect = CGRectMake(CGRectGetMinX(monthFrame1) + floor(CGRectGetWidth(monthFrame1) * 0), CGRectGetMinY(monthFrame1) + floor(CGRectGetHeight(monthFrame1) * 0.15), floor(CGRectGetWidth(monthFrame1) * 1), floor(CGRectGetHeight(monthFrame1) * 0.75));
     [white setFill];
    // [monthContent drawInRect: monthRect withFont: monthFont lineBreakMode: UILineBreakModeWordWrap alignment: UITextAlignmentCenter];
     [self drawString:monthContent

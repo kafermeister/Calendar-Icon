@@ -10,8 +10,6 @@
 
 @implementation UIImage (Snapshot)
 
-
-
 + (void)beginImageContextWithSize:(CGSize)size
 {
 if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {

@@ -13,17 +13,11 @@
 
 -(id)init{
        self =  [super init];
-   // self = [self initWithText:nil andFrame:CGRectMake(0, 0, 100, 100)];
-     
     return self;
 } 
 
 -(id)initWithDate:(NSDate*)theDate andFrame:(CGRect)frame{
-    
-  
-    
- 
-    
+   
     NSString  *text = @"";
     NSString  *text2 = @"";
     // use current date if nil
@@ -43,7 +37,7 @@
     }else {
         
         NSDateFormatter *df2 = [[NSDateFormatter alloc] init];
-        //  df2.dateStyle = NSDateFormatterFullStyle;
+    
         [df2 setDateFormat:@"d"];
         text  =  [df2 stringFromDate:[NSDate date]];  
         
@@ -55,12 +49,10 @@
  
     
     CalendarIcon *iconView = [[CalendarIcon alloc] initWithFrame:frame];
-    
-    // [iconView setText:text];
+     
     [iconView setDay:text];
     [iconView setMonth:text2];
     
-   // return  (CalendarIconImage *) [UIImage imageFromView:iconView] ;
     return  (CalendarIconImage *)[UIImage maskImage:[UIImage imageFromView:iconView] withMask:[UIImage imageFromView:iconView]];
 }
  
@@ -74,7 +66,7 @@
     if([text length] == 0 || text == nil){
         
         NSDateFormatter *df2 = [[NSDateFormatter alloc] init];
-        //  df2.dateStyle = NSDateFormatterFullStyle;
+       
         [df2 setDateFormat:@"dd"];
         text  =  [df2 stringFromDate:[NSDate date]];  
         
@@ -84,25 +76,14 @@
         
     }
     
- //   CalendarIcon *iconView = [[CalendarIcon alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-   
     CalendarIcon *iconView = [[CalendarIcon alloc] initWithFrame:frame];
 
-   // [iconView setText:text];
      [iconView setDay:text];
      [iconView setMonth:text2];
    
     
       return  (CalendarIconImage *)[UIImage maskImage:[UIImage imageFromView:iconView] withMask:[UIImage imageFromView:iconView]];
 }
-
  
-
-/* 
--(id)scaledToSize:(CGSize)size{
-
- return [UIImage imageWithImage:self scaledToSize:CGSizeMake(28, 28) ];
-}
-*/   
 
 @end
